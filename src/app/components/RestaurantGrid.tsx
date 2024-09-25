@@ -7,7 +7,6 @@ const restaurants = [
     { name: 'Breakfast Club', icon: '/assets/egg and bacon.png', status: 'Open', time: '20-25 min' },
     { name: "Burgers n' stuff", icon: '/assets/burger.png', status: 'Open', time: '25-40 min' },
     { name: 'Fries Guys', icon: '/assets/fries.png', status: 'Open', time: '1 hour' },
-    { name: 'Cortado Bar', icon: '/assets/coffee.png', status: 'Closed', time: 'Opens tomorrow at 12 pm' },
 ]
 
 export default function RestaurantGrid() {

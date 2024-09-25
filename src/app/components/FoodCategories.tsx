@@ -1,20 +1,16 @@
 import Image from 'next/image'
+import {Filter} from "@/app/types";
 
-const categories = [
-    { name: 'Hamburgers', icon: '/assets/burger.png' },
-    { name: 'Pizza', icon: '/assets/pizza.png' },
-    { name: 'Taco', icon: '/assets/taco.png' },
-    { name: 'Coffee', icon: '/assets/coffee.png' },
-    { name: 'Fries', icon: '/assets/fries.png' },
-    { name: 'Mexican', icon: '/assets/burrito.png' },
-    { name: 'Breakfast', icon: '/assets/egg and bacon.png' },
-]
+interface FoodCategoriesProps {
+    filters: Filter[]
+}
 
-export default function FoodCategories() {
+export default function FoodCategories({ filters }: FoodCategoriesProps) {
+    
     return (
         <div className="w-full overflow-hidden">
             <div className="flex overflow-x-auto space-x-4 py-4 px-4 -mx-4">
-                {categories.map((category, index) => (
+                {filters.filters.map(category => (
                     <div
                         key={category.name}
                         className="relative flex-none"
@@ -26,7 +22,7 @@ export default function FoodCategories() {
                             border: '0.6px solid rgba(0, 0, 0, 0.1)',
                             boxShadow: '-16px 9px 18px rgba(0, 0, 0, 0.01), -4px 2px 10px rgba(0, 0, 0, 0.01)',
                             borderRadius: '8px',
-                            order: index,
+                            //order: index,
                             flexGrow: 0,
                         }}
                     >
@@ -46,7 +42,7 @@ export default function FoodCategories() {
             </span>
                         <div className="absolute right-0 top-0">
                             <Image
-                                src={category.icon}
+                                src={category.image_url}
                                 alt={category.name}
                                 width={80}
                                 height={80}

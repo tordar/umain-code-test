@@ -4,12 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b9afa55-b562-4de1-8f42-866fb3df4a10" name="Changes" comment="basic layout and font added">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="1b9afa55-b562-4de1-8f42-866fb3df4a10" name="Changes" comment="adding public asset files">
+      <change afterPath="$PROJECT_DIR$/src/app/lib/api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.umain-code-test.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.umain-code-test.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/burger.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/hamburger.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/burrito.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/burrito.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/coffee.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/coffee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/egg and bacon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/breakfast.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fries.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/fries.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/pizza.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/pizza.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/taco.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/taco.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/FilterSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/FilterSidebar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/FoodCategories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/FoodCategories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Logo.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/RestaurantGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/RestaurantGrid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +125,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727251698191</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="correct food categories">
+      <option name="closed" value="true" />
+      <created>1727256488144</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727256488145</updated>
+    </task>
+    <task id="LOCAL-00006" summary="adding public asset files">
+      <option name="closed" value="true" />
+      <created>1727256713157</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1727256713157</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +153,8 @@
     <MESSAGE value="create next app" />
     <MESSAGE value="add gitignore" />
     <MESSAGE value="basic layout and font added" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic layout and font added" />
+    <MESSAGE value="correct food categories" />
+    <MESSAGE value="adding public asset files" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding public asset files" />
   </component>
 </project>
