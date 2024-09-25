@@ -2,12 +2,12 @@ import Image from 'next/image'
 
 
 const restaurants = [
-    { name: 'Cortado Bar', icon: '/placeholder.svg?height=80&width=80', status: 'Open', time: '5-10 min' },
-    { name: 'Neta', icon: '/placeholder.svg?height=80&width=80', status: 'Open', time: '5-10 min' },
-    { name: 'Breakfast Club', icon: '/placeholder.svg?height=80&width=80', status: 'Open', time: '20-25 min' },
-    { name: "Burgers n' stuff", icon: '/placeholder.svg?height=80&width=80', status: 'Open', time: '25-40 min' },
-    { name: 'Fries Guys', icon: '/placeholder.svg?height=80&width=80', status: 'Open', time: '1 hour' },
-    { name: 'Cortado Bar', icon: '/placeholder.svg?height=80&width=80', status: 'Closed', time: 'Opens tomorrow at 12 pm' },
+    { name: 'Cortado Bar', icon: '/assets/coffee.png', status: 'Open', time: '5-10 min' },
+    { name: 'Neta', icon: '/assets/burrito.png', status: 'Open', time: '5-10 min' },
+    { name: 'Breakfast Club', icon: '/assets/egg and bacon.png', status: 'Open', time: '20-25 min' },
+    { name: "Burgers n' stuff", icon: '/assets/burger.png', status: 'Open', time: '25-40 min' },
+    { name: 'Fries Guys', icon: '/assets/fries.png', status: 'Open', time: '1 hour' },
+    { name: 'Cortado Bar', icon: '/assets/coffee.png', status: 'Closed', time: 'Opens tomorrow at 12 pm' },
 ]
 
 export default function RestaurantGrid() {

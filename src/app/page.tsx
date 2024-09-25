@@ -3,10 +3,11 @@ import FilterSidebar from './components/FilterSidebar'
 import FoodCategories from './components/FoodCategories'
 import RestaurantGrid from './components/RestaurantGrid'
 
+
 export default function Dashboard() {
   return (
-      <div className="min-h-screen bg-gray-100">
-        <header className="bg-white shadow-sm">
+      <div className="min-h-screen">
+        <header>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <Logo />
           </div>
@@ -16,7 +17,7 @@ export default function Dashboard() {
             <aside className="w-full md:w-64">
               <FilterSidebar />
             </aside>
-            <div className="flex-1">
+            <div className="flex-grow min-w-0">
               <FoodCategories />
               <h2 className="text-2xl mt-8 mb-4">Restaurant's</h2>
               <RestaurantGrid />
@@ -26,3 +27,4 @@ export default function Dashboard() {
       </div>
   )
 }
+
