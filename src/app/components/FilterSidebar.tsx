@@ -1,16 +1,13 @@
 import { Filter } from '../types'
 
 interface FilterSidebarProps {
-    filters: Filter[]
+    filters: {
+        filters: Filter[]
+    }
 }
 
-export default function FilterSidebar( { filters }: FilterSideBarProps) {
+export default function FilterSidebar( { filters }: FilterSidebarProps) {
 
-    const categoryFilters = filters.filters.map(f => f.name)
-    //const deliveryTimeFilters = filters.filter(f => f.type === 'deliveryTime')
-    //const priceRangeFilters = filters.filter(f => f.type === 'priceRange')
-    
-    //console.log(categoryFilters)
     return (
         <div className="bg-white shadow rounded-lg p-4">
             <h2 className="text-xl font-semibold mb-4">Filter</h2>

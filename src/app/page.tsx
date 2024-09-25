@@ -11,7 +11,7 @@ export default async function Dashboard() {
         getAllFilters()
     ]);
 
-    console.log(restaurants)
+    //console.log(filters)
   return (
       <div className="min-h-screen">
         <header>
@@ -27,7 +27,7 @@ export default async function Dashboard() {
             <div className="flex-grow min-w-0">
               <FoodCategories filters={filters}/>
               <h2 className="text-2xl mt-8 mb-4">Restaurant's</h2>
-              <RestaurantGrid restaurants={restaurants}/>
+              <RestaurantGrid/>
             </div>
           </div>
         </main>

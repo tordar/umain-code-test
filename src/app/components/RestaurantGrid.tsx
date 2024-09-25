@@ -2,11 +2,11 @@ import Image from 'next/image'
 
 
 const restaurants = [
-    { name: 'Cortado Bar', icon: '/assets/coffee.png', status: 'Open', time: '5-10 min' },
-    { name: 'Neta', icon: '/assets/burrito.png', status: 'Open', time: '5-10 min' },
-    { name: 'Breakfast Club', icon: '/assets/egg and bacon.png', status: 'Open', time: '20-25 min' },
-    { name: "Burgers n' stuff", icon: '/assets/burger.png', status: 'Open', time: '25-40 min' },
-    { name: 'Fries Guys', icon: '/assets/fries.png', status: 'Open', time: '1 hour' },
+    { name: 'Cortado Bar', icon: '/images/coffee.png', status: 'Open', time: '5-10 min' },
+    { name: 'Neta', icon: '/images/burrito.png', status: 'Open', time: '5-10 min' },
+    { name: 'Breakfast Club', icon: '/images/breakfast.png', status: 'Open', time: '20-25 min' },
+    { name: "Burgers n' stuff", icon: '/images/hamburger.png', status: 'Open', time: '25-40 min' },
+    { name: 'Fries Guys', icon: '/images/fries.png', status: 'Open', time: '1 hour' },
 ]
 
 export default function RestaurantGrid() {
@@ -25,7 +25,6 @@ export default function RestaurantGrid() {
                             <p className="text-sm text-gray-500 mt-1">{restaurant.time}</p>
                         </div>
                     </div>
-                    
                 </div>
             ))}
         </div>

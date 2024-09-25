@@ -2,7 +2,9 @@ import Image from 'next/image'
 import {Filter} from "@/app/types";
 
 interface FoodCategoriesProps {
-    filters: Filter[]
+    filters: {
+        filters: Filter[]
+    }
 }
 
 export default function FoodCategories({ filters }: FoodCategoriesProps) {
