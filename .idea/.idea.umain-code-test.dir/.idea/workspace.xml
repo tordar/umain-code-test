@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b9afa55-b562-4de1-8f42-866fb3df4a10" name="Changes" comment="add gitignore">
-      <change afterPath="$PROJECT_DIR$/src/app/components/FilterSidebar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/FoodCategories.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/Logo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/RestaurantGrid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.umain-code-test.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.umain-code-test.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="1b9afa55-b562-4de1-8f42-866fb3df4a10" name="Changes" comment="basic layout and font added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +75,7 @@
       <updated>1727182712825</updated>
       <workItem from="1727182713917" duration="279000" />
       <workItem from="1727183008469" duration="1566000" />
-      <workItem from="1727186702524" duration="3446000" />
+      <workItem from="1727186702524" duration="3764000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -110,7 +101,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727187026074</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="basic layout and font added">
+      <option name="closed" value="true" />
+      <created>1727251698191</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727251698191</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +120,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="create next app" />
     <MESSAGE value="add gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
+    <MESSAGE value="basic layout and font added" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic layout and font added" />
   </component>
 </project>
