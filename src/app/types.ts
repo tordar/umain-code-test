@@ -11,9 +11,10 @@ export interface Restaurant {
     rating: number
     filterIds: string
     image_url: string
-    delivery_time_minutes: number
+    delivery_time_minutes: string
 }
 
 export interface RestaurantStatus {
+    id: string
     isOpen: boolean
 }

@@ -8,6 +8,11 @@ interface FilterSidebarProps {
 
 export default function FilterSidebar( { filters }: FilterSidebarProps) {
 
+    
+    // I want to create a filterChip component that can be used for the sidebar. 
+    
+    // I also want to render the filter dynamically. If small screen, only show the delivery time.
+    
     return (
         <div className="bg-white shadow rounded-lg p-4">
             <h2 className="text-xl mb-4">Filter</h2>

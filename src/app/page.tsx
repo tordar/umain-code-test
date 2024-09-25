@@ -2,7 +2,7 @@ import Logo from './utils/Logo'
 import FilterSidebar from './components/FilterSidebar'
 import FoodCategories from './components/FoodCategories'
 import RestaurantGrid from './components/RestaurantGrid'
-import { getAllRestaurants, getAllFilters } from './lib/api'
+import {getAllRestaurants, getAllFilters, getRestaurantOpenStatus} from './lib/api'
 
 
 export default async function Dashboard() {
@@ -26,7 +26,7 @@ export default async function Dashboard() {
             <div className="flex-grow min-w-0">
               <FoodCategories filters={filters}/>
               <h2 className="text-2xl mt-8 mb-4">Restaurant's</h2>
-              <RestaurantGrid/>
+              <RestaurantGrid restaurants={restaurants}/>
             </div>
           </div>
         </main>
