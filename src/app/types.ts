@@ -8,8 +8,10 @@ export interface Filter {
 export interface Restaurant {
     id: string
     name: string
-    icon?: string
-    deliveryTime: string
+    rating: number
+    filterIds: string
+    image_url: string
+    delivery_time_minutes: number
 }
 
 export interface RestaurantStatus {

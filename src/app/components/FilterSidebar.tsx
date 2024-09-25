@@ -10,7 +10,7 @@ export default function FilterSidebar( { filters }: FilterSidebarProps) {
 
     return (
         <div className="bg-white shadow rounded-lg p-4">
-            <h2 className="text-xl font-semibold mb-4">Filter</h2>
+            <h2 className="text-xl mb-4">Filter</h2>
             <div className="space-y-4">
                 <div>
                     <h3 className="text-sm font-medium text-gray-500 mb-2">FOOD CATEGORY</h3>

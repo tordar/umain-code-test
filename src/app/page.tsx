@@ -1,4 +1,4 @@
-import Logo from './components/Logo'
+import Logo from './utils/Logo'
 import FilterSidebar from './components/FilterSidebar'
 import FoodCategories from './components/FoodCategories'
 import RestaurantGrid from './components/RestaurantGrid'
@@ -11,7 +11,6 @@ export default async function Dashboard() {
         getAllFilters()
     ]);
 
-    //console.log(filters)
   return (
       <div className="min-h-screen">
         <header>

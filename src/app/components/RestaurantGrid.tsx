@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Chip from "@/app/utils/Chip";
 
 
 const restaurants = [
@@ -6,7 +7,7 @@ const restaurants = [
     { name: 'Neta', icon: '/images/burrito.png', status: 'Open', time: '5-10 min' },
     { name: 'Breakfast Club', icon: '/images/breakfast.png', status: 'Open', time: '20-25 min' },
     { name: "Burgers n' stuff", icon: '/images/hamburger.png', status: 'Open', time: '25-40 min' },
-    { name: 'Fries Guys', icon: '/images/fries.png', status: 'Open', time: '1 hour' },
+    { name: 'Fries Guys', icon: '/images/fries.png', status: 'Closed', time: '1 hour' },
 ]
 
 export default function RestaurantGrid() {
@@ -17,12 +18,13 @@ export default function RestaurantGrid() {
                     <div className="flex items-center space-x-4">
                         <Image src={restaurant.icon} alt={restaurant.name} width={80} height={80} className="rounded-md" />
                         <div>
-                            <h3 className="font-semibold">{restaurant.name}</h3>
+                            <h3>{restaurant.name}</h3>
                             <div className="flex items-center space-x-2 mt-1">
-                                <span className={`w-2 h-2 rounded-full ${restaurant.status === 'Open' ? 'bg-green-500' : 'bg-red-500'}`} />
-                                <span className="text-sm text-gray-600">{restaurant.status}</span>
+                                <span
+                                    className={`w-2 h-2 rounded-full ${restaurant.status === 'Open' ? 'bg-green-500' : 'bg-red-500'}`}/>
+                                <Chip label={restaurant.status}/>
                             </div>
-                            <p className="text-sm text-gray-500 mt-1">{restaurant.time}</p>
+                            <Chip label={restaurant.time}/>
                         </div>
                     </div>
                 </div>
