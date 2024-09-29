@@ -15,6 +15,5 @@ export interface Restaurant {
 }
 
 export interface RestaurantStatus {
-    id: string
     isOpen: boolean
 }

@@ -1,7 +1,13 @@
-const API_BASE_URL = 'https://work-test-web-2024-eze6j4scpq-lz.a.run.app/api'; // Replace with your actual API base URL
+const API_BASE_URL = 'https://work-test-web-2024-eze6j4scpq-lz.a.run.app/api';
 
 export async function getAllRestaurants() {
-    const response = await fetch(`${API_BASE_URL}/restaurants`);
+    const response = await fetch(`${API_BASE_URL}/restaurants`, {
+        cache: 'no-store',
+        headers: {
+            'Cache-Control': 'no-cache',
+            'Pragma': 'no-cache'
+        }
+    });
     if (!response.ok) {
         throw new Error('Failed to fetch restaurants');
     }
@@ -33,7 +39,13 @@ export async function getFilter(id: string) {
 }
 
 export async function getRestaurantOpenStatus(id: string) {
-    const response = await fetch(`${API_BASE_URL}/open/${id}`);
+    const response = await fetch(`${API_BASE_URL}/open/${id}`, {
+        cache: 'no-store',
+        headers: {
+            'Cache-Control': 'no-cache',
+            'Pragma': 'no-cache'
+        }
+    });
     if (!response.ok) {
         throw new Error(`Failed to fetch open status for restaurant with id ${id}`);
     }

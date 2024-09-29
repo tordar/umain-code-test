@@ -6,11 +6,12 @@ import {getAllRestaurants, getAllFilters, getRestaurantOpenStatus} from './lib/a
 
 
 export default async function Dashboard() {
-    const [restaurants, filters] = await Promise.all([
+    const [restaurants, filters, restaurantOpen] = await Promise.all([
         getAllRestaurants(),
-        getAllFilters()
+        getAllFilters(),
+        //getRestaurantOpenStatus()
     ]);
-
+//console.log(restaurants)
   return (
       <div className="min-h-screen">
         <header>
