@@ -21,10 +21,16 @@ export default async function RestaurantGrid( {restaurants }: RestaurantsProps) 
         })
     )
     
+    const sortedRestaurants = restaurantsWithStatus.sort((a, b) => {
+        if (a.status.is_open && !b.status.is_open) return -1;
+        if (!a.status.is_open && b.status.is_open) return 1;
+        return 0;
+    });
+    
 
     return (
         <div className="flex flex-row flex-wrap items-start content-start p-0 gap-[17px]">
-            {restaurantsWithStatus.map((restaurant, index) => (
+            {sortedRestaurants.map((restaurant, index) => (
                 <div
                     key={restaurant.id}
                     className="flex flex-col justify-between items-start p-4 gap-6 w-[327px] h-[202px] bg-white rounded-lg relative overflow-hidden"
@@ -57,6 +63,7 @@ export default async function RestaurantGrid( {restaurants }: RestaurantsProps) 
                                 boxSizing: 'border-box',
                                 border: '0.6px solid rgba(0, 0, 0, 0.1)',
                                 boxShadow: '-16px 9px 18px rgba(0, 0, 0, 0.01), -4px 2px 10px rgba(0, 0, 0, 0.01)',
+                                opacity: restaurant.status.is_open ? 1 : 0
                             }}
                         >
               <span className="text-xs leading-3 tracking-[-0.5px] text-black">
@@ -64,7 +71,7 @@ export default async function RestaurantGrid( {restaurants }: RestaurantsProps) 
               </span>
                         </div>
                     </div>
-                    <div className="flex flex-row justify-between items-end p-0 gap-[50px] w-[295px] h-8 z-1">
+                    <div className="flex flex-row justify-between items-end p-0 gap-[50px] w-[295px] h-8 z-1" style={{ opacity: restaurant.status.is_open ? 1 : 0.2 }}>
                         <h2 className="text-2xl leading-6 tracking-[-0.5px] text-black">{restaurant.name}</h2>
                         <button className="flex justify-center items-center w-8 h-8 bg-[#00703A] rounded-[88px]">
                             -&gt;
