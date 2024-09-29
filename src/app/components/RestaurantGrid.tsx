@@ -67,7 +67,7 @@ export default async function RestaurantGrid( {restaurants }: RestaurantsProps) 
                     <div className="flex flex-row justify-between items-end p-0 gap-[50px] w-[295px] h-8 z-1">
                         <h2 className="text-2xl leading-6 tracking-[-0.5px] text-black">{restaurant.name}</h2>
                         <button className="flex justify-center items-center w-8 h-8 bg-[#00703A] rounded-[88px]">
-                            >
+                            -&gt;
                         </button>
                     </div>
                     <div className="absolute w-[140px] h-[140px] left-[217px] top-[-30px] z-2">
