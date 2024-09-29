@@ -15,5 +15,6 @@ export interface Restaurant {
 }
 
 export interface RestaurantStatus {
-    isOpen: boolean
+    restaurant_id: string;
+    is_open: boolean
 }

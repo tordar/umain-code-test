@@ -11,24 +11,18 @@ interface RestaurantsProps {
 
 export default async function RestaurantGrid( {restaurants }: RestaurantsProps) {
     const restaurantsWithStatus = await Promise.all(
-        restaurants.restaurants.map(async (restaurant, index) => {
+        restaurants.restaurants.map(async (restaurant) => {
             try {
                 const status = await getRestaurantOpenStatus(restaurant.id)
-                return { ...restaurant, status: { isOpen: index % 2 === 0 } }
+                return { ...restaurant, status }
             } catch (error) {
                 console.error(`Error fetching status for ${restaurant.name}:`, error)
-                return { ...restaurant, status: { isOpen: null } }
+                return { ...restaurant, status: { is_open: null } }
             }
         })
     )
 
-    console.log('Restaurants with status:', restaurantsWithStatus)
-    
-    // I want to display if a restaurant is open. I need to check the ID of each restaurant that is rendered, and match it with the id from the restaurantStatus.
-    // I need to import this functionality as a prop from the API file.
-    
     // I also want to improve the styling of these cards, to match the Figma files.
-    
     
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -39,13 +33,13 @@ export default async function RestaurantGrid( {restaurants }: RestaurantsProps) 
                         <div>
                             <h3>{r.name}</h3>
                             <div className="flex items-center space-x-2 mb-2">
-                                {r.status.isOpen !== null ? (
+                                {r.status.is_open !== null ? (
                                     <>
                                 <span
-                                    className={`w-2 h-2 rounded-full ${r.status.isOpen ? 'bg-green-500' : 'bg-red-500'}`}
+                                    className={`w-2 h-2 rounded-full ${r.status.is_open ? 'bg-green-500' : 'bg-red-500'}`}
                                 />
                                         <span className="text-sm text-gray-600">
-                                    {r.status.isOpen ? 'Open' : 'Closed'}
+                                    {r.status.is_open ? 'Open' : 'Closed'}
                                 </span>
                                     </>
                                 ) : (

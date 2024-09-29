@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b9afa55-b562-4de1-8f42-866fb3df4a10" name="Changes" comment="">
+    <list default="true" id="1b9afa55-b562-4de1-8f42-866fb3df4a10" name="Changes" comment="dynamically rendering open status">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.umain-code-test.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.umain-code-test.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/RestaurantGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/RestaurantGrid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lib/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +92,7 @@
       <workItem from="1727182713917" duration="279000" />
       <workItem from="1727183008469" duration="1566000" />
       <workItem from="1727186702524" duration="3764000" />
-      <workItem from="1727607626485" duration="3241000" />
+      <workItem from="1727607626485" duration="3895000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -176,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727274459623</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="dynamically rendering open status">
+      <option name="closed" value="true" />
+      <created>1727610974600</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1727610974600</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +200,7 @@
     <MESSAGE value="filters and categories rendered from API" />
     <MESSAGE value="made and implemented custom chips" />
     <MESSAGE value="Use API for names in restaurant grid" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use API for names in restaurant grid" />
+    <MESSAGE value="dynamically rendering open status" />
+    <option name="LAST_COMMIT_MESSAGE" value="dynamically rendering open status" />
   </component>
 </project>
