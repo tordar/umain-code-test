@@ -2,7 +2,8 @@ import Logo from './utils/Logo'
 import FilterSidebar from './components/FilterSidebar'
 import FoodCategories from './components/FoodCategories'
 import RestaurantGrid from './components/RestaurantGrid'
-import {getAllRestaurants, getAllFilters, getRestaurantOpenStatus} from './lib/api'
+import { getAllRestaurants, getAllFilters } from './lib/api'
+import { FilterProvider } from './contexts/FilterContext'
 
 
 export default async function Dashboard() {
@@ -11,7 +12,11 @@ export default async function Dashboard() {
         getAllFilters()
     ]);
     
+    // When you open the page for the first time on mobile, you should be taken to a green welcome screen
+    // The logo is still too small
+    
   return (
+      <FilterProvider>
       <div className="min-h-screen">
         <header>
           <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -31,6 +36,7 @@ export default async function Dashboard() {
           </div>
         </main>
       </div>
+      </FilterProvider>
   )
 }
 

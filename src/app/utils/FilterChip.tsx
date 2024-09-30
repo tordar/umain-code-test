@@ -1,11 +1,16 @@
 interface FilterChipProps {
     label: string
+    isSelected: boolean
+    onClick: () => void
 }
 
-export default function FilterChip({ label }: FilterChipProps) {
+export default function FilterChip({ label, isSelected, onClick }: FilterChipProps) {
     return (
-        <div
-            className="inline-flex justify-center py-2 px-3 mx-2 my-2 items-center bg-white rounded-lg"
+        <button
+            onClick={onClick}
+            className={`inline-flex justify-center py-2 px-3 mx-2 my-2 items-center rounded-lg transition-colors duration-200 ${
+                isSelected ? 'bg-gray-400 text-white' : 'bg-white text-black border-gray-300'
+            }`}
             style={{
                 boxSizing: 'border-box',
                 border: '0.6px solid rgba(0, 0, 0, 0.1)',
@@ -31,7 +36,7 @@ export default function FilterChip({ label }: FilterChipProps) {
           >
             {label}
           </span>
-        </div>
+        </button>
     )
 }
 

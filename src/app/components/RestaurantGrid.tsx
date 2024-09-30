@@ -1,6 +1,11 @@
+"use client"
+
 import Image from 'next/image'
 import { Restaurant } from '../types'
 import { getRestaurantOpenStatus } from '../lib/api'
+import { useFilter } from '../contexts/FilterContext'
+import { useEffect, useState } from 'react'
+//import FilteredRestaurants from './FilteredRestaurants'
 
 interface RestaurantsProps {
     restaurants: {
@@ -21,16 +26,43 @@ export default async function RestaurantGrid( {restaurants }: RestaurantsProps) 
         })
     )
     
-    const sortedRestaurants = restaurantsWithStatus.sort((a, b) => {
-        if (a.status.is_open && !b.status.is_open) return -1;
-        if (!a.status.is_open && b.status.is_open) return 1;
-        return 0;
-    });
+    return <FilteredRestaurants restaurants={restaurantsWithStatus} />
+}
+    function FilteredRestaurants({ restaurants }) {
+        const { selectedCategories, selectedDeliveryTimes, selectedPriceRanges } = useFilter()
+        const [filteredRestaurants, setFilteredRestaurants] = useState(restaurants)
+
+        useEffect(() => {
+            const filtered = restaurants.filter(restaurant => {
+                const categoryMatch = selectedCategories.length === 0 || restaurant.filter_ids.some(id => selectedCategories.includes(id))
+                const deliveryTimeMatch = selectedDeliveryTimes.length === 0 || selectedDeliveryTimes.some(time => {
+                    const [min, max] = time.split('-').map(t => parseInt(t))
+                    return restaurant.delivery_time_minutes >= min && restaurant.delivery_time_minutes <= (max || Infinity)
+                })
+                const priceRangeMatch = selectedPriceRanges.length === 0 || selectedPriceRanges.includes('$'.repeat(restaurant.price_range_id.length))
+
+                return categoryMatch && deliveryTimeMatch && priceRangeMatch
+            })
+
+            setFilteredRestaurants(filtered)
+        }, [restaurants, selectedCategories, selectedDeliveryTimes, selectedPriceRanges])
+    
+    // const sortedRestaurants = restaurantsWithStatus.sort((a, b) => {
+    //     if (a.status.is_open && !b.status.is_open) return -1;
+    //     if (!a.status.is_open && b.status.is_open) return 1;
+    //     return 0;
+    // });
+    
+    // Fix button arrow
+    // Should all closed restaurants be "Opens tomorrow at 12 pm"?
+    // Can I make the sortedRestaurants better somehow?
+    // Still need to add price range to the restaurants
+    // To sort on category, you need to use the filter_ids in the restaurants - they are the same as filter ID? 
     
 
     return (
         <div className="flex flex-row flex-wrap items-start content-start p-0 gap-[17px]">
-            {sortedRestaurants.map((restaurant, index) => (
+            {filteredRestaurants.map((restaurant, index) => (
                 <div
                     key={restaurant.id}
                     className="flex flex-col justify-between items-start p-4 gap-6 w-[327px] h-[202px] bg-white rounded-lg relative overflow-hidden"

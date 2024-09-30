@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b9afa55-b562-4de1-8f42-866fb3df4a10" name="Changes" comment="Improved closed restaurants cards">
+    <list default="true" id="1b9afa55-b562-4de1-8f42-866fb3df4a10" name="Changes" comment="Improved chips in filterSidebar">
+      <change afterPath="$PROJECT_DIR$/src/app/contexts/FilterContext.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.umain-code-test.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.umain-code-test.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/FilterSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/FilterSidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/RestaurantGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/RestaurantGrid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/utils/FilterChip.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/FilterChip.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,30 +33,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/rodekors/Documents/GitHub/umain-code-test&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/rodekors/Documents/GitHub/umain-code-test/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/rodekors/Documents/GitHub/umain-code-test",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "/Users/rodekors/Documents/GitHub/umain-code-test/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/rodekors/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/rodekors/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache&quot;,
-      &quot;/Users/rodekors/.local/share/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/rodekors/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
+      "/Users/rodekors/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache",
+      "/Users/rodekors/.local/share/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -76,8 +81,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -92,7 +97,7 @@
       <workItem from="1727182713917" duration="279000" />
       <workItem from="1727183008469" duration="1566000" />
       <workItem from="1727186702524" duration="3764000" />
-      <workItem from="1727607626485" duration="12804000" />
+      <workItem from="1727607626485" duration="18811000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -222,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727639977083</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Improved chips in filterSidebar">
+      <option name="closed" value="true" />
+      <created>1727644973590</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1727644973590</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +259,7 @@
     <MESSAGE value="restaurant grid more aligned with figma" />
     <MESSAGE value="fixed typescript error" />
     <MESSAGE value="Improved closed restaurants cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved closed restaurants cards" />
+    <MESSAGE value="Improved chips in filterSidebar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved chips in filterSidebar" />
   </component>
 </project>
