@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b9afa55-b562-4de1-8f42-866fb3df4a10" name="Changes" comment="Improved chips in filterSidebar">
+    <list default="true" id="1b9afa55-b562-4de1-8f42-866fb3df4a10" name="Changes" comment="functioning logic for prices">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.umain-code-test.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.umain-code-test.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +229,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727644973590</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="functioning logic for prices">
+      <option name="closed" value="true" />
+      <created>1727697255305</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1727697255305</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +262,7 @@
     <MESSAGE value="fixed typescript error" />
     <MESSAGE value="Improved closed restaurants cards" />
     <MESSAGE value="Improved chips in filterSidebar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved chips in filterSidebar" />
+    <MESSAGE value="functioning logic for prices" />
+    <option name="LAST_COMMIT_MESSAGE" value="functioning logic for prices" />
   </component>
 </project>

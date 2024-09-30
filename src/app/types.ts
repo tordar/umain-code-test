@@ -13,10 +13,10 @@ export interface Restaurant {
     image_url: string
     delivery_time_minutes: number
     price_range_id: string
-    status?: {
+    status: {
         is_open: boolean | null
     }
-    priceRange?: {
+    priceRange: {
         range: string
     }
 }

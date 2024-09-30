@@ -3,6 +3,7 @@ import FilterSidebar from './components/FilterSidebar'
 import FoodCategories from './components/FoodCategories'
 import RestaurantGrid from './components/RestaurantGrid'
 import { getAllRestaurants, getAllFilters } from './lib/api'
+import RestaurantDataFetcher from './components/RestaurantDataFetcher'
 import { FilterProvider } from './contexts/FilterContext'
 
 
@@ -31,7 +32,7 @@ export default async function Dashboard() {
             <div className="flex-grow min-w-0">
               <FoodCategories filters={filters}/>
               <h2 className="text-2xl mt-8 mb-4">Restaurants</h2>
-              <RestaurantGrid restaurants={restaurants}/>
+                <RestaurantDataFetcher restaurants={restaurants} />
             </div>
           </div>
         </main>
