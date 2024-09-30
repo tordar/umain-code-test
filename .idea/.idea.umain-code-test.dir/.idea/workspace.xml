@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b9afa55-b562-4de1-8f42-866fb3df4a10" name="Changes" comment="fully functioning filterSidebar logic">
+    <list default="true" id="1b9afa55-b562-4de1-8f42-866fb3df4a10" name="Changes" comment="mobile filter improved and conditionally rendered">
+      <change afterPath="$PROJECT_DIR$/src/app/components/SplashScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.umain-code-test.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.umain-code-test.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/FilterSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/FilterSidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/RestaurantDataFetcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/RestaurantDataFetcher.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/utils/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/Logo.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727699805359</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="mobile filter improved and conditionally rendered">
+      <option name="closed" value="true" />
+      <created>1727702618563</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1727702618563</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +283,7 @@
     <MESSAGE value="Improved chips in filterSidebar" />
     <MESSAGE value="functioning logic for prices" />
     <MESSAGE value="fully functioning filterSidebar logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="fully functioning filterSidebar logic" />
+    <MESSAGE value="mobile filter improved and conditionally rendered" />
+    <option name="LAST_COMMIT_MESSAGE" value="mobile filter improved and conditionally rendered" />
   </component>
 </project>
