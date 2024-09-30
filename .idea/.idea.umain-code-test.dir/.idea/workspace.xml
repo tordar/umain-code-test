@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b9afa55-b562-4de1-8f42-866fb3df4a10" name="Changes" comment="functioning logic for prices">
+    <list default="true" id="1b9afa55-b562-4de1-8f42-866fb3df4a10" name="Changes" comment="fully functioning filterSidebar logic">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.umain-code-test.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.umain-code-test.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/FilterSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/FilterSidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/RestaurantDataFetcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/RestaurantDataFetcher.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727697255305</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fully functioning filterSidebar logic">
+      <option name="closed" value="true" />
+      <created>1727699805359</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1727699805359</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +273,7 @@
     <MESSAGE value="Improved closed restaurants cards" />
     <MESSAGE value="Improved chips in filterSidebar" />
     <MESSAGE value="functioning logic for prices" />
-    <option name="LAST_COMMIT_MESSAGE" value="functioning logic for prices" />
+    <MESSAGE value="fully functioning filterSidebar logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="fully functioning filterSidebar logic" />
   </component>
 </project>

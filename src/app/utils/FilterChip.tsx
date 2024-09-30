@@ -8,7 +8,7 @@ export default function FilterChip({ label, isSelected, onClick }: FilterChipPro
     return (
         <button
             onClick={onClick}
-            className={`inline-flex justify-center py-2 px-3 mx-2 my-2 items-center rounded-lg transition-colors duration-200 ${
+            className={`inline-flex justify-center py-2 px-3 mr-2 my-2 items-center rounded-lg transition-colors duration-200 ${
                 isSelected ? 'bg-gray-400 text-white' : 'bg-white text-black border-gray-300'
             }`}
             style={{
