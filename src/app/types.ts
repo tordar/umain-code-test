@@ -16,6 +16,9 @@ export interface Restaurant {
     status?: {
         is_open: boolean | null
     }
+    priceRange?: {
+        range: string
+    }
 }
 
 export interface RestaurantStatus {

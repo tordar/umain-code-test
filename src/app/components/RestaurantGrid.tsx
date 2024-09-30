@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { Restaurant } from '../types'
-import { getRestaurantOpenStatus } from '../lib/api'
+import {getPriceRange, getRestaurantOpenStatus} from '../lib/api'
 import { useFilter } from '../contexts/FilterContext'
 import { useEffect, useState } from 'react'
 //import FilteredRestaurants from './FilteredRestaurants'
@@ -17,11 +17,14 @@ export default async function RestaurantGrid( {restaurants }: RestaurantsProps) 
     const restaurantsWithStatus = await Promise.all(
         restaurants.restaurants.map(async (restaurant) => {
             try {
-                const status = await getRestaurantOpenStatus(restaurant.id)
-                return { ...restaurant, status }
+                const [status, priceRange] = await Promise.all([
+                    getRestaurantOpenStatus(restaurant.id),
+                    getPriceRange(restaurant.price_range_id)
+                ])
+                return { ...restaurant, status, priceRange }
             } catch (error) {
                 console.error(`Error fetching status for ${restaurant.name}:`, error)
-                return { ...restaurant, status: { is_open: null } }
+                return { ...restaurant, status: { is_open: null }, priceRange: { range: null }  }
             }
         })
     )
@@ -39,7 +42,7 @@ export default async function RestaurantGrid( {restaurants }: RestaurantsProps) 
                     const [min, max] = time.split('-').map(t => parseInt(t))
                     return restaurant.delivery_time_minutes >= min && restaurant.delivery_time_minutes <= (max || Infinity)
                 })
-                const priceRangeMatch = selectedPriceRanges.length === 0 || selectedPriceRanges.includes('$'.repeat(restaurant.price_range_id.length))
+                const priceRangeMatch = selectedPriceRanges.length === 0 || (restaurant.priceRange.range !== null && selectedPriceRanges.includes('$'.repeat(restaurant.priceRange.range.length)))
 
                 return categoryMatch && deliveryTimeMatch && priceRangeMatch
             })
