@@ -27,7 +27,7 @@ export default function SplashScreen() {
     return (
         <div className="md:hidden fixed z-50 inset-0 bg-[#00703A] flex flex-col items-center justify-between p-8 text-white">
             <div className="w-full">
-                <Logo />
+                <Logo color="white" />
             </div>
             <div>
                 <h1 className="mb-4" style={{
