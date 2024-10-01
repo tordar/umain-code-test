@@ -28,9 +28,10 @@ export default async function Dashboard() {
                         </aside>
                         <div className="flex-grow overflow-x-hidden">
                             <FoodCategories filters={filters}/>
-                            <h2 className="text-2xl mt-8 mb-4">Restaurants</h2>
+                            <h2 className="text-4xl mt-8 mb-8">Restaurants</h2>
                             <RestaurantDataFetcher restaurants={restaurants} />
                         </div>
+                        
                     </div>
                 </main>
             </div>

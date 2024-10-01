@@ -20,9 +20,7 @@ export default function FoodCategories({ filters }: FoodCategoriesProps) {
                 {filters.filters.map(category => (
                     <div
                         key={category.name}
-                        className={`relative flex-none cursor-pointer ${
-                            selectedCategories.includes(category.id) ? 'ring-2 ring-[#00703A]' : ''
-                        }`}
+                        
                         style={{
                             boxSizing: 'border-box',
                             width: '160px',
@@ -35,9 +33,15 @@ export default function FoodCategories({ filters }: FoodCategoriesProps) {
                             flexGrow: 0,
                         }}
                         onClick={() => toggleCategory(category.id)}
+                        className={`relative flex-none cursor-pointer ${
+                            selectedCategories.includes(category.id) ? 'text-amber-50' : ''
+                        }`}
                     >
             <span
-                className="absolute left-3 top-1/2 transform -translate-y-1/2 mt-[-17px]"
+               
+                className={`absolute left-3 top-1/2 transform -translate-y-1/2 mt-[-17px] ${
+                    selectedCategories.includes(category.id) ? 'cursor-cell' : ''
+                }`}
                 style={{
                     fontFamily: 'SF Pro, sans-serif',
                     fontStyle: 'normal',

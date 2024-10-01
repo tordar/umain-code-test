@@ -9,6 +9,12 @@ interface RestaurantGridProps {
     restaurants: Restaurant[]
 }
 
+const NoMatchMessage = () => (
+    <div className="w-full p-4 bg-yellow-100 text-yellow-800 rounded-lg text-center">
+        No matching restaurants found. Try adjusting your filters.
+    </div>
+)
+
 export default function RestaurantGrid({ restaurants }: RestaurantGridProps) {
     const { selectedCategories, selectedDeliveryTimes, selectedPriceRanges } = useFilter()
     const [filteredRestaurants, setFilteredRestaurants] = useState(restaurants)
@@ -36,6 +42,10 @@ export default function RestaurantGrid({ restaurants }: RestaurantGridProps) {
         setFilteredRestaurants(sortedRestaurants)
     }, [restaurants, selectedCategories, selectedDeliveryTimes, selectedPriceRanges])
 
+    if (filteredRestaurants.length === 0) {
+        return <NoMatchMessage />
+    }
+
     return (
         <div className="flex flex-row flex-wrap items-start content-start p-0 gap-[17px]">
             {filteredRestaurants.map((restaurant, index) => (
@@ -46,9 +56,7 @@ export default function RestaurantGrid({ restaurants }: RestaurantGridProps) {
                         boxSizing: 'border-box',
                         border: '0.6px solid rgba(0, 0, 0, 0.1)',
                         boxShadow: '-16px 9px 18px rgba(0, 0, 0, 0.01), -4px 2px 10px rgba(0, 0, 0, 0.01)',
-                        isolation: 'isolate',
-                        order: index,
-                        flexGrow: 0,
+                        isolation: 'isolate'
                     }}
                 >
                     <div className="flex flex-row items-center p-0 gap-2 w-[142px] h-7 z-0">

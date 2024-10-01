@@ -25,8 +25,8 @@ export default function FilterSidebar({ filters }: FilterSidebarProps) {
             {/* Mobile view: show only delivery time */}
             <div className="md:hidden">
                 <h3 className="text-sm font-medium text-gray-500 mb-2">DELIVERY TIME</h3>
-                <ul className="space-y-2">
-                    {['0-10 min', '10-30 min', '30-60 min', '1 hour+'].map((time) => (
+                <div className="space-y-2">
+                    {['0-10 min', '10-30 min', '30-60 min', '60 min+'].map((time) => (
                         <FilterChip
                             key={time}
                             label={time}
@@ -34,7 +34,7 @@ export default function FilterSidebar({ filters }: FilterSidebarProps) {
                             onClick={() => toggleDeliveryTime(time)}
                         />
                     ))}
-                </ul>
+                </div>
             </div>
 
             {/* Desktop view: show all filters */}
@@ -43,7 +43,7 @@ export default function FilterSidebar({ filters }: FilterSidebarProps) {
                 <div className="space-y-4">
                     <div>
                         <h3 className="text-sm font-medium text-gray-500 mb-2">FOOD CATEGORY</h3>
-                        <div className="space-y-2 mb-2">
+                        <div className="flex flex-wrap">
                             {filters.filters.map(filter => (
                                 <FilterChip
                                     key={filter.id}
@@ -57,8 +57,8 @@ export default function FilterSidebar({ filters }: FilterSidebarProps) {
 
                     <div>
                         <h3 className="text-sm font-medium text-gray-500 mb-2">DELIVERY TIME</h3>
-                        <ul className="space-y-2 mb-2">
-                            {['0-10 min', '10-30 min', '30-60 min', '1 hour+'].map((time) => (
+                        <div className="flex flex-wrap">
+                            {['0-10 min', '10-30 min', '30-60 min', '60 min+'].map((time) => (
                                 <FilterChip
                                     key={time}
                                     label={time}
@@ -66,12 +66,12 @@ export default function FilterSidebar({ filters }: FilterSidebarProps) {
                                     onClick={() => toggleDeliveryTime(time)}
                                 />
                             ))}
-                        </ul>
+                        </div>
                     </div>
 
                     <div>
                         <h3 className="text-sm font-medium text-gray-500 mb-2">PRICE RANGE</h3>
-                        <div className="space-x-2 mb-2">
+                        <div className="flex">
                             {['$', '$$', '$$$', '$$$$'].map((price) => (
                                 <FilterChip
                                     key={price}
