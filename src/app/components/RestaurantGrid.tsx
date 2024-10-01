@@ -28,7 +28,7 @@ export default function RestaurantGrid({ restaurants }: RestaurantGridProps) {
             })
 
             const priceRangeMatch = selectedPriceRanges.length === 0 || (restaurant.priceRange.range !== null && selectedPriceRanges.includes('$'.repeat(restaurant.priceRange.range.length)))
-
+            
             return categoryMatch && deliveryTimeMatch && priceRangeMatch
         })
 

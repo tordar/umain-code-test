@@ -20,8 +20,3 @@ export interface Restaurant {
         range: string
     }
 }
-
-export interface RestaurantStatus {
-    restaurant_id: string;
-    is_open: boolean
-}
