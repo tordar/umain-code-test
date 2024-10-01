@@ -1,5 +1,8 @@
+'use client'
+
 import Image from 'next/image'
 import {Filter} from "@/app/types";
+import { useFilter } from "@/app/contexts/FilterContext"
 
 interface FoodCategoriesProps {
     filters: {
@@ -8,14 +11,18 @@ interface FoodCategoriesProps {
 }
 
 export default function FoodCategories({ filters }: FoodCategoriesProps) {
+    const { selectedCategories, toggleCategory } = useFilter()
+    console.log(selectedCategories)
     
     return (
         <div className="w-full overflow-hidden">
-            <div className="flex overflow-x-auto space-x-4 py-4 px-4 -mx-4">
+            <div className="flex overflow-x-auto space-x-4 px-4 -mx-4">
                 {filters.filters.map(category => (
                     <div
                         key={category.name}
-                        className="relative flex-none"
+                        className={`relative flex-none cursor-pointer ${
+                            selectedCategories.includes(category.id) ? 'ring-2 ring-[#00703A]' : ''
+                        }`}
                         style={{
                             boxSizing: 'border-box',
                             width: '160px',
@@ -27,6 +34,7 @@ export default function FoodCategories({ filters }: FoodCategoriesProps) {
                             //order: index,
                             flexGrow: 0,
                         }}
+                        onClick={() => toggleCategory(category.id)}
                     >
             <span
                 className="absolute left-3 top-1/2 transform -translate-y-1/2 mt-[-17px]"
